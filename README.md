@@ -16,3 +16,8 @@ menjadi
 'ClientBuilder::from_uri(Uri::from_static("ws://127.0.0.1:8080"))'
 
 Selain server.rs dan client.rs, tidak ada file yang lain yang perlu diubah. server.rs menggunakan TCP dan client.rs menggunakan websocket. Ini bisa dilakukan karena lapisan transportasi yang mendasari websocket adalah TCP.
+
+Exercise 2.3:
+![img 2.3](img/img%203.png)
+Pada server.rs, saya mengubah 'let client_info = format!("{text:?}");' menjadi 'let client_info = format!("{addr:?}: {text:?}");'
+Ini dilakukan supaya client_info yang disend ke seluruh client tidak hanya berupa teks, tapi juga address dari client yang menulisnya.
